@@ -9,7 +9,7 @@
 	<title>Form Page</title>
 </head>
 <body>
-	<form action="/submitted-form.php">
+	<form action="/submitted-form.php" method="post">
 		<label>Name:</label>
 		<input type="text" name="name" value="name"><br>
 		<label>Email:</label>
