@@ -6,12 +6,15 @@
 </head>
 <body>
 <?php 
-	<?php echo $_GET["name"]; ?><br>
-	<?php echo $_GET["email"]; ?><br>
-	<?php echo $_GET["major"]; ?><br>
-	<?php echo $_GET["comments"]; ?><br>
+	$name = $_POST["name"];
+	$email = $_POST["email"];
+	$major = $_POST["major"];
+	$comments = $_POST["comments"];
+	echo  "$name <br>";
+	echo "<a href='mailto:" . $email . "'>";
+	echo  "$name <br>";
+	echo  "$name <br>";
+?>
 
- ?>
- 
 </body>
 </html>
