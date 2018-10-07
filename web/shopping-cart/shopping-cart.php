@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 
 <?php
-  $product1 = $_POST["product1"]["qty"]; //how to transfer product and its quantity?
+  $product1 = $_POST["product1"]; //how to transfer product and its quantity?
   $product2 = $_POST["product2"];
   $product3 = $_POST["product3"];
 ?>
