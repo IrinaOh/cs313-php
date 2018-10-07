@@ -27,6 +27,7 @@
 		<br>
 		<label>Comments:</label>
 		<textarea name="comments"></textarea></br></br>
+		<label>Continents:</label>
         <input type="checkbox" name="continent[]" value="na">North America</br>
         <input type="checkbox" name="continent[]" value="sa">South America</br>
         <input type="checkbox" name="continent[]" value="eu">Europe</br>

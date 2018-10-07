@@ -3,7 +3,7 @@
   if (isset($_SESSION["cart"]) < 1) {
     $_SESSION["cart"] = array();
   }
-  $_SESSION["cart"][$_POST["product"]] += $_POST["qty"];
+  $_SESSION["product"] = "product";
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -16,7 +16,6 @@
       <p>Product 1</p>
       <form class="" action="product.php" method="post">
         <input type="hidden" name="product" value="001">
-        Quantity: <input type="number" name="qty" min="1" max="10" value="">
         <input type="submit" name="submit" value="Add to Cart">
       </form>
     </div>
@@ -24,7 +23,6 @@
       <p>Product 2</p>
       <form class="" action="product.php" method="post">
         <input type="hidden" name="product" value="002">
-        Quantity: <input type="number" name="qty" min="1" max="10" value="">
         <input type="submit" name="submit" value="Add to Cart">
       </form>
     </div>
@@ -32,10 +30,10 @@
       <p>Product 3</p>
       <form class="" action="product.php" method="post">
         <input type="hidden" name="product" value="003">
-        Quantity: <input type="number" name="qty" min="1" max="10" value="">
         <input type="submit" name="submit" value="Add to Cart">
       </form>
     </div>
+    <?php echo $_SESSION["cart"] ?>
     <a href="shopping-cart.php">SEE SHOPPING CART</a>
   </body>
 </html>
