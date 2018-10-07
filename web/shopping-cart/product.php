@@ -33,7 +33,7 @@
         <input type="submit" name="submit" value="Add to Cart">
       </form>
     </div>
-    <?php echo $_SESSION["cart"] ?>
+    <?php echo $_SESSION["cart"]; ?>
     <a href="shopping-cart.php">SEE SHOPPING CART</a>
   </body>
 </html>
