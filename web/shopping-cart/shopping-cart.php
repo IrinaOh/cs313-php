@@ -1,9 +1,10 @@
 <?php session_start(); ?>
 
 <?php
-  $product1 = $_POST["product1"]; //how to transfer product and its quantity?
-  $product2 = $_POST["product2"];
-  $product3 = $_POST["product3"];
+	$cart = $_SESSION["cart"];
+	$product1 = $_SESSION["product1"]; 
+	$product2 = $_SESSION["product2"];
+	$product3 = $_SESSION["product3"];
 ?>
 
 <html>
@@ -17,9 +18,9 @@
 	$productsDB = array("001"=>"Product 1",
 						"002"=>"Product 2",
 						"003"=>"Product 3");
-	foreach ($_SESSION["cart"] as $p){
+	foreach ($cart as $p){
 		print "$productsDB[$p]";
-		print "$_SESSION["cart"][$p] <br />";
+		print "$cart[$p] <br />";
 	}
 ?>
 <p>Remove all items from the cart:</p> <?php session_unset(); ?>
