@@ -6,9 +6,9 @@
 </head>
 <body>
 	<?php
-	  $street = $_SESSION["street"];
-	  $city = $_SESSION["city"];
-	  $zip = $_SESSION["zip"];
+	  $_SESSION["street"] = $street;
+	  $_SESSION["city"] = $city;
+	  $_SESSION["zip"] = $zip;
 	?>
 	<a href="shopping-cart.php">Back to Shopping Cart</a>
 	<form class="" action="confirmation.php" method="post">

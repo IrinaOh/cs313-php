@@ -13,9 +13,12 @@
 
 
 <?php
-  foreach ($cart as $p){
-    print "$cart[$p] <br />";
-  }
+	foreach ($cart as $p){
+	    print "$cart[$p] <br />";
+	}
+  	$street = $_SESSION["street"];
+	$city = $_SESSION["city"];
+	$zip = $_SESSION["zip"];
  ?>
 <p>Shipping to:</p><br>
 <p>Street: <?=$street ?></p><br>
