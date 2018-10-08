@@ -19,9 +19,9 @@
   	<h4>Pick your spices:</h4>
 	<form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 		<input type="checkbox" name="salt" value="salt"> Salt<br>
-		<input type="pepper" name="pepper" value="pepper"> Pepper<br>
-		<input type="rosemary" name="rosemary" value="rosemary"> Rosemary<br>
-		<input type="cumin" name="cumin" value="cumin"> Cumin<br>
+		<input type="checkbox" name="pepper" value="pepper"> Pepper<br>
+		<input type="checkbox" name="rosemary" value="rosemary"> Rosemary<br>
+		<input type="checkbox" name="cumin" value="cumin"> Cumin<br>
 		<input type="submit" name="submit" value="submit">
 	</form>
   </body>
