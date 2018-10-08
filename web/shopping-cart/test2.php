@@ -1,11 +1,11 @@
 <?php  
 	session_start();
 	echo $_SESSION['myValue'];
-	// $test = $_SESSION['test'];
-	// $street = $_SESSION['street'];
-	// $city = $_SESSION['city'];
-	// $state = $_SESSION['state'];
-	// $zip = $_SESSION['zip'];
+	$test = $_SESSION['test'];
+	$street = $_SESSION['street'];
+	$city = $_SESSION['city'];
+	$state = $_SESSION['state'];
+	$zip = $_SESSION['zip'];
 ?>
 <!DOCTYPE html>
 <html>

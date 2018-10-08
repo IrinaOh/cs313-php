@@ -2,11 +2,11 @@
 	if(isset($_POST['submit'])){
 		session_start(); 
 		$_SESSION['myValue']=3;	
-		// $SESSION['test'] = "test";
-		// $SESSION['street'] = htmlentities($_SESSION['street']);
-		// $SESSION['city'] = htmlentities($_POST['city']);
-		// $SESSION['state'] = htmlentities($_POST['state']);
-		// $SESSION['zip'] = htmlentities($_POST['zip']);
+		$_SESSION['test'] = "test";
+		$_SESSION['street'] = htmlentities($_POST['street']);
+		$_SESSION['city'] = htmlentities($_POST['city']);
+		$_SESSION['state'] = htmlentities($_POST['state']);
+		$_SESSION['zip'] = htmlentities($_POST['zip']);
 		header('Location: test2.php');
 	}
 
