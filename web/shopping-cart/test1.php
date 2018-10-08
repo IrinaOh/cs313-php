@@ -15,7 +15,7 @@
 	<title></title>
 </head>
 <body>
-	<form methos="POST">
+	<form methos="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 		<input type="text" name="street" placeholder="Enter Street"><br>
 		<input type="text" name="city" placeholder="Enter City"><br>
 		<input type="text" name="state" placeholder="Enter State"><br>
