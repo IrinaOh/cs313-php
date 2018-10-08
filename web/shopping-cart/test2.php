@@ -11,6 +11,6 @@
 	<title></title>
 </head>
 <body>
-	<h5>Shipping address is : <?php echo $street . $city . $state . $zip; ?></h5>
+	<h5>Shipping address is : <?php echo $street; ?></h5>
 </body>
 </html>
