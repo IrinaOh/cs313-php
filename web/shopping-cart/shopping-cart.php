@@ -13,10 +13,10 @@
 <body>
 	<h5>Items in your shopping cart:</h5>
 	<?php 
-	echo $salt; 
-	echo $pepper;
-	echo $rosemary;
-	echo $cumin;
+	echo $salt; <br>
+	echo $pepper; <br>
+	echo $rosemary;<br>
+	echo $cumin;<br>
 
 	?>
 	<a href="product.php">BACK TO SHOPPING</a>

@@ -1,24 +1,25 @@
-<?php session_start(); ?>
+<?php 
+	if(isset($_POST['submit'])){
+		session_start(); 
+		$_SESSION['street'] = htmlentities($_POST['street']);
+		$_SESSION['city'] = htmlentities($_POST['city']);
+		$_SESSION['state'] = htmlentities($_POST['state']);
+		$_SESSION['zip'] = htmlentities($_POST['zip']);
+		header('Location: confirmation.php');
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
 </head>
 <body>
-	<?php
-	  $_SESSION["street"] = $street;
-	  $_SESSION["city"] = $city;
-	  $_SESSION["zip"] = $zip;
-	?>
-	<a href="shopping-cart.php">Back to Shopping Cart</a>
-	<form class="" action="confirmation.php" method="post">
-	  <p>Add your shipping address:</p>
-	  Street:<input type="text" name="street" value="">
-	  City:<input type="text" name="city" value="">
-	  Zip:<input type="number" name="zip" value="">
-
-	  <input type="submit" name="submit" value="Confirm Purchase">
+	<form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+		<input type="text" name="street" placeholder="Enter Street"><br>
+		<input type="text" name="city" placeholder="Enter City"><br>
+		<input type="text" name="state" placeholder="Enter State"><br>
+		<input type="text" name="zip" placeholder="Enter Zip"><br>
+		<input type="submit" name="submit" value="submit">
 	</form>
 </body>
 </html>
-

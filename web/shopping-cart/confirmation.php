@@ -1,23 +1,36 @@
-<?php session_start(); ?>
+<?php  
+	session_start();
+	$salt = $_SESSION['salt'];
+	$pepper = $_SESSION['pepper'];
+	$rosemary = $_SESSION['rosemary'];
+	$cumin = $_SESSION['cumin'];
+	$street = $_SESSION['street'];
+	$city = $_SESSION['city'];
+	$state = $_SESSION['state'];
+	$zip = $_SESSION['zip'];
+	print_r($_SESSION);
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h3>Your order contains:</h3>
+	<?php 
+	echo $salt; 
+	echo $pepper;
+	echo $rosemary;
+	echo $cumin;
 
-<p>Purchased products:</p><br>
-	<?php
-		$productsDB = array("001"=>"Product 1",
-							"002"=>"Product 2",
-							"003"=>"Product 3");
-		foreach ($cart as $c){
-			print "$productsDB[$c] <br />";
-		}
 	?>
-</p>
+	<h5>Shipping address is:</h5>
+	<?php 
+	echo $street; 
+	echo $city;
+	echo $state;
+	echo $zip;
 
-
-<?php
-  	$street = $_SESSION["street"];
-	$city = $_SESSION["city"];
-	$zip = $_SESSION["zip"];
- ?>
-<p>Shipping to:</p><br>
-<p>Street: <?=$street ?></p><br>
-<p>City: <?=$city ?></p><br>
-<p>Zip: <?=$zip ?></p><br>
+	?>
+</body>
+</html>
