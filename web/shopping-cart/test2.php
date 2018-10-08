@@ -11,6 +11,7 @@
 	<title></title>
 </head>
 <body>
+	<?php echo"Pass variables"; ?>
 	<h5>Shipping address is : <?php echo $street; ?></h5>
 </body>
 </html>
