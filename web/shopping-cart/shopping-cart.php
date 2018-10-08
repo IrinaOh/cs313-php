@@ -13,11 +13,7 @@
 <body>
 	<h5>Items in your shopping cart:</h5>
 	<?php 
-	echo $salt; <br>
-	echo $pepper; <br>
-	echo $rosemary;<br>
-	echo $cumin;<br>
-
+		echo $salt."<br>".$pepper."<br>".$rosemary."<br>".$cumin; 
 	?>
 	<a href="product.php">BACK TO SHOPPING</a>
 	<a href="checkout.php">PROCEED TO CHECKOUT</a>
