@@ -1,6 +1,6 @@
 <?php 
 	session_start(); 
-	if(isset($_POST['submit'])){
+	if(isset($_SESSION['submit'])){
 
 		$SESSION['street'] = htmlentities($_POST['street']);
 		$SESSION['city'] = htmlentities($_POST['city']);
@@ -23,6 +23,5 @@
 		<input type="text" name="zip" placeholder="Enter Zip"><br>
 		<input type="submit" name="submit" value="submit">
 	</form>
-	<a href="test2.php">go to next page</a>
 </body>
 </html>
