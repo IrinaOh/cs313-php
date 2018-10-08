@@ -14,6 +14,7 @@
 	<title></title>
 </head>
 <body>
+	<h3>Enter your shipping address here:</h3>
 	<form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 		<input type="text" name="street" placeholder="Enter Street"><br>
 		<input type="text" name="city" placeholder="Enter City"><br>

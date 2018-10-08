@@ -8,7 +8,6 @@
 	$city = $_SESSION['city'];
 	$state = $_SESSION['state'];
 	$zip = $_SESSION['zip'];
-	print_r($_SESSION);
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,19 +17,11 @@
 <body>
 	<h3>Your order contains:</h3>
 	<?php 
-	echo $salt; 
-	echo $pepper;
-	echo $rosemary;
-	echo $cumin;
-
+		echo $salt."<br>".$pepper."<br>".$rosemary."<br>".$cumin; 
 	?>
 	<h5>Shipping address is:</h5>
 	<?php 
-	echo $street; 
-	echo $city;
-	echo $state;
-	echo $zip;
-
+		echo $street.", ".$city.", ".$state.", ".$zip; 
 	?>
 </body>
 </html>
