@@ -15,12 +15,13 @@
 	<title></title>
 </head>
 <body>
-	<form methos="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+	<form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 		<input type="text" name="street" placeholder="Enter Street"><br>
 		<input type="text" name="city" placeholder="Enter City"><br>
 		<input type="text" name="state" placeholder="Enter State"><br>
 		<input type="text" name="zip" placeholder="Enter Zip"><br>
 		<input type="submit" name="submit" value="submit">
 	</form>
+	<a href="test2.php">go to next page</a>
 </body>
 </html>
