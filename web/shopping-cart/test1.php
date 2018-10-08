@@ -2,8 +2,8 @@
 	session_start(); 
 	$_SESSION['submit'];
 	if(isset($_POST['submit'])){
-
-		$SESSION['street'] = htmlentities($_POST['street']);
+		$SESSION['test'] = "test";
+		$SESSION['street'] = htmlentities($_SESSION['street']);
 		$SESSION['city'] = htmlentities($_POST['city']);
 		$SESSION['state'] = htmlentities($_POST['state']);
 		$SESSION['zip'] = htmlentities($_POST['zip']);
