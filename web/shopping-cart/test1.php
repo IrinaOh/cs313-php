@@ -1,7 +1,6 @@
 <?php 
-	session_start(); 
-	$_SESSION['submit'];
 	if(isset($_POST['submit'])){
+		session_start(); 	
 		$SESSION['test'] = "test";
 		$SESSION['street'] = htmlentities($_SESSION['street']);
 		$SESSION['city'] = htmlentities($_POST['city']);
