@@ -1,3 +1,6 @@
+<?php $_GET("id") = $id; ?> 
+
+
 <?php
 try
 {
@@ -30,7 +33,7 @@ catch (PDOException $ex)
 	<?php
 		foreach ($db->query('SELECT photoshoot_type FROM photoshoot') as $p)
 		{
-			echo "<a href='session-detail.php?id=" . $p['photoshoot_id'] . "' >" . $p['photoshoot_type'] . "</a>";
+			echo "<p><a href='session-detail.php?id=" . $p['photoshoot_id'] . "'>" . $p['photoshoot_type'] . "</a></p>";
 		}
 	?>
 

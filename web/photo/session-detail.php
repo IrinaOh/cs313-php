@@ -1,3 +1,5 @@
+<?php $id = $_GET("id"); ?> 
+
 <?php
 try
 {
@@ -21,6 +23,8 @@ catch (PDOException $ex)
   die();
 }
 ?>
+
+
 <!doctype html>
 <head>
 	<title>Photo Finder</title>
@@ -28,13 +32,12 @@ catch (PDOException $ex)
 <body>
 	<h1> Photo Sessions </h1>
 	<?php
-		foreach ($db->query('SELECT * FROM photoshoot') as $row)
+		foreach ($db->query('SELECT * FROM photoshoot where $id') as $p)
 		{
-			echo "<p><b>" . $row['photoshoot_type'] . " ";
-			echo $row['photoshoot_length'];
-			echo ":" . $row['photoshoot_number_of_people'] . "</b> - ";
+			echo "<p><b>" . $p['photoshoot_type'] . " ";
+			echo $p['photoshoot_length'] . "hour";
+			echo "up to " . $p['photoshoot_number_of_people'] . " people</b> - ";
 			echo '</p>';
-			echo "<a href=''>" . $row
 		}
 	?>
 
