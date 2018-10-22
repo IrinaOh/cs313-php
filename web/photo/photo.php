@@ -28,23 +28,20 @@ catch (PDOException $ex)
 <body>
 	<h1> Photo Sessions </h1>
 	<?php
-	foreach ($db->query('SELECT * FROM photoshoots') as $row)
+		foreach ($db->query('SELECT * FROM photoshoot') as $row)
 		{
-		  echo "<p><b>" . $row['photoshoot_type'] . " ";
-		  echo $row['photoshoot_length'];
-		  echo ":" . $row['photoshoot_number_of_people'] . "</b> - ";
-		  echo '</p>';
-	}
+			echo "<p><b>" . $row['photoshoot_type'] . " ";
+			echo $row['photoshoot_length'];
+			echo ":" . $row['photoshoot_number_of_people'] . "</b> - ";
+			echo '</p>';
+		}
 	?>
 
-	<form action="" method ="post" id="searchForm">
+<!-- 	<form action="" method ="post" id="searchForm">
 		<input type="text" name="search">
 		<input type="submit" name="submit" value="Search">
-	</form>
+	</form> -->
 
-	<?php
-
-	?>
 
 
 </body>
