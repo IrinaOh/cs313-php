@@ -37,7 +37,7 @@ catch (PDOException $ex)
 	<?php
 		foreach ($db->query('SELECT photoshoot_type FROM photoshoot') as $p)
 		{
-			echo "<p><a href='session-detail.php?id=$sid'>" . $p['photoshoot_type'] . "</a></p>";
+			echo "<p><a href='session-detail.php?id=" . $p['photoshoot_id'] . "'>" . "</a></p>";
 		}
 	?>
 
