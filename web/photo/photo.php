@@ -1,5 +1,5 @@
 <?php
-if(isset($_GET['id'])){
+if(isset($_GET['photoshoot_id'])){
   $photoshoot_id = $_GET['photoshoot_id'];
   echo $photoshoot_id;
 } else {

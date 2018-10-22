@@ -1,4 +1,7 @@
-<?php $id = $_GET("id"); ?> 
+<?php 
+	$id = $_GET("photoshoot_id");
+	echo $id; 
+?> 
 
 <?php
 try
