@@ -28,11 +28,11 @@ catch (PDOException $ex)
 <body>
 	<h1> Photo Sessions </h1>
 	<?php
-	foreach ($db->query('SELECT * FROM schedules') as $row)
+	foreach ($db->query('SELECT * FROM photoshoots') as $row)
 		{
-		  echo "<p><b>" . $row['schedule_date'] . " ";
-		  echo $row['schedule_time'];
-		  echo ":" . $row['location'] . "</b> - ";
+		  echo "<p><b>" . $row['photoshoot_type'] . " ";
+		  echo $row['photoshoot_length'];
+		  echo ":" . $row['photoshoot_number_of_people'] . "</b> - ";
 		  echo '</p>';
 	}
 	?>
