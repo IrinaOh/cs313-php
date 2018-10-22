@@ -34,9 +34,9 @@ catch (PDOException $ex)
 	<title>Photo Finder</title>
 </head>
 <body>
-	<h1> Photo Sessions </h1>
+	<h1> Photo Session Details </h1>
 	<?php
-		foreach ($db->query('SELECT * FROM photoshoot where photoshoot_id = $id') as $p)
+		foreach ($db->query('SELECT * FROM photoshoot where photoshoot_id = <?php echo $id ?>') as $p)
 		{
 			echo "<p><b>" . $p['photoshoot_type'] . " ";
 			echo $p['photoshoot_length'] . "hour";
