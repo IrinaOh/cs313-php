@@ -34,5 +34,9 @@ CREATE TABLE feedback
 INSERT INTO photoshoot
 	(photoshoot_type, photoshoot_length, photoshoot_number_of_people, photoshoot_number_of_images, photoshoot_number_of_outfits) 
 VALUES 
-	('High School Senior Portrait', 1, 1, 30, 2);
+	('High School Senior Portrait', 1, 1, 30, 2),
+	('Family Portrait', 1, 1, 30, 2),
+	('Studio Portrait', 1, 1, 30, 2),
+	('Couples Portrait', 1, 1, 30, 2),
+	('Mini Session Portrait', 0.5, 1, 30, 2);
 
