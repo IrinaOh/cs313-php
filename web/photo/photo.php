@@ -1,7 +1,11 @@
-<?php 
-// $_GET("photoshoot_id") = $id; 
-?> 
-
+<?php
+if(isset($_GET['id'])){
+  $photoshoot_id = $_GET['photoshoot_id'];
+  echo $photoshoot_id;
+} else {
+  echo "failed";
+}
+?>
 
 <?php
 try
