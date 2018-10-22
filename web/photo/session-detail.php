@@ -1,7 +1,8 @@
-<?php 
-	$id = $_GET("photoshoot_id");
-	echo $id; 
-?> 
+<?php
+	session_start();
+	$id = $_SESSION['id'];
+	echo $id;
+?>
 
 <?php
 try

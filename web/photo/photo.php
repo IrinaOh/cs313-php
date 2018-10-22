@@ -1,10 +1,6 @@
-<?php
-if(isset($_GET['photoshoot_id'])){
-  $photoshoot_id = $_GET['photoshoot_id'];
-  echo $photoshoot_id;
-} else {
-  echo "failed";
-}
+<?php 
+	session_start();
+	$_SESSION['id'] = $_GET['id'];
 ?>
 
 <?php
