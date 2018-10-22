@@ -1,7 +1,9 @@
 <?php 
 	session_start();
-	$_SESSION['id'] = $_GET['id'];
+	$_SESSION['sid'] = $_GET['id'];
+	$sid = $_GET['id'];
 ?>
+
 
 <?php
 try
@@ -35,7 +37,7 @@ catch (PDOException $ex)
 	<?php
 		foreach ($db->query('SELECT photoshoot_type FROM photoshoot') as $p)
 		{
-			echo "<p><a href='session-detail.php?id=" . $p['photoshoot_id'] . "'>" . $p['photoshoot_type'] . "</a></p>";
+			echo "<p><a href='session-detail.php?id=$sid'>" . $p['photoshoot_type'] . "</a></p>";
 		}
 	?>
 
