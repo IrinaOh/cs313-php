@@ -32,7 +32,7 @@ catch (PDOException $ex)
 <body>
 	<h1> Photo Sessions </h1>
 	<?php
-		foreach ($db->query('SELECT * FROM photoshoot where $id') as $p)
+		foreach ($db->query('SELECT * FROM photoshoot where photoshoot_id = 1') as $p)
 		{
 			echo "<p><b>" . $p['photoshoot_type'] . " ";
 			echo $p['photoshoot_length'] . "hour";
