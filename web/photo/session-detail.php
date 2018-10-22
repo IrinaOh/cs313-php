@@ -28,9 +28,13 @@ catch (PDOException $ex)
 <body>
 	<h1> Photo Sessions </h1>
 	<?php
-		foreach ($db->query('SELECT photoshoot_type FROM photoshoot') as $p)
+		foreach ($db->query('SELECT * FROM photoshoot') as $row)
 		{
-			echo "<a href='session-detail.php?id=" . $p['photoshoot_id'] . "' >" . $p['photoshoot_type'] . "</a>";
+			echo "<p><b>" . $row['photoshoot_type'] . " ";
+			echo $row['photoshoot_length'];
+			echo ":" . $row['photoshoot_number_of_people'] . "</b> - ";
+			echo '</p>';
+			echo "<a href=''>" . $row
 		}
 	?>
 
