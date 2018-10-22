@@ -1,4 +1,6 @@
-<?php $_GET("photoshoot_id") = $id; ?> 
+<?php 
+// $_GET("photoshoot_id") = $id; 
+?> 
 
 
 <?php
