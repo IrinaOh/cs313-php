@@ -35,7 +35,7 @@ catch (PDOException $ex)
 <body>
 	<h1> Photo Session Details </h1>
 	<?php
-		foreach ($db->query('SELECT * FROM photoshoot WHERE photoshoot_id=1') as $p)
+		foreach ($db->query('SELECT * FROM photoshoot WHERE photoshoot_id=".$id."') as $p)
 		{
 		    $id = $p['photoshoot_id'];
 		    $type = $p['photoshoot_type'];
