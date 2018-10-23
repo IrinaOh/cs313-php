@@ -1,6 +1,5 @@
 <?php
 	$id = $_GET['id'];
-	echo $id;
 ?>
 
 <?php
@@ -41,10 +40,10 @@ catch (PDOException $ex)
 		    $type = $p['photoshoot_type'];
 		    $length = $p['photoshoot_length'];
 		    $number_of_people = $p['photoshoot_number_of_people'];
-		    echo $id;
-			echo "<p><b>" . $type . " ";
-			echo $length . "hour, ";
-			echo "up to " . $number_of_people . " people</b></p>";
+		    $number_of_outfits = $p['photoshoot_number_of_outfits'];
+			echo "<p><b>" . $type . "</b> - length: ". $length . " hour, up to " . $number_of_people . " people, " . $number_of_outfits . " outfits</p>";
+			echo ;
+			echo ;
 		}
 		// $getAddress = $db->prepare("SELECT * FROM address ORDER BY address_id ASC");
 		//   $getAddress->execute();
