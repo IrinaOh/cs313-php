@@ -35,30 +35,37 @@ catch (PDOException $ex)
 <body>
 	<h1> Photo Session Details </h1>
 	<?php
-		// foreach ($db->query('SELECT * FROM photoshoot WHERE photoshoot_id="$id"') as $p)
-		// {
-		//     $id = $p['photoshoot_id'];
-		//     $type = $p['photoshoot_type'];
-		//     $length = $p['photoshoot_length'];
-		//     $number_of_people = $p['photoshoot_number_of_people'];
+		foreach ($db->query('SELECT * FROM photoshoot WHERE photoshoot_id="$id"') as $p)
+		{
+		    $id = $p['photoshoot_id'];
+		    $type = $p['photoshoot_type'];
+		    $length = $p['photoshoot_length'];
+		    $number_of_people = $p['photoshoot_number_of_people'];
+		    echo $id;
+			echo "<p><b>" . $type . " ";
+			echo $length . "hour, ";
+			echo "up to " . $number_of_people . " people</b></p>";
+		}
+		// $getAddress = $db->prepare("SELECT * FROM address ORDER BY address_id ASC");
+		//   $getAddress->execute();
+		//   $addressArray = $getAddress->fetchAll();
+		//   foreach ($addressArray as $address){
+		//         echo $address['street'] . ", " . $address['city'] . ", " . $address['zip'] . ", " . $address['country'] . "<br>";
+		//   }
+
+		// foreach ($db->query("SELECT * FROM photoshoot WHERE photoshoot_id='$book'" as $row)
+
+		// $stmt = $db->prepare('SELECT * FROM photoshoot WHERE photoshoot_id=:$id');
+		// $stmt->bindValue(':photoshoot_id', $id, PDO::PARAM_INT);
+		// $stmt->bindValue(':photoshoot_type', $type, PDO::PARAM_INT);
+		// $stmt->bindValue(':photoshoot_length', $length, PDO::PARAM_INT);
+		// $stmt->bindValue(':photoshoot_number_of_people', $number_of_people, PDO::PARAM_INT);
+		// $stmt->execute();
+		// $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		// 	echo "<p><b>" . $type . " ";
 		// 	echo $length . "hour, ";
 		// 	echo "up to " . $number_of_people . " people</b>";
 		// 	echo '</p>';
-		// }
-
-
-		$stmt = $db->prepare('SELECT * FROM photoshoot WHERE photoshoot_id=:$id');
-		$stmt->bindValue(':photoshoot_id', $id, PDO::PARAM_INT);
-		$stmt->bindValue(':photoshoot_type', $type, PDO::PARAM_INT);
-		$stmt->bindValue(':photoshoot_length', $length, PDO::PARAM_INT);
-		$stmt->bindValue(':photoshoot_number_of_people', $number_of_people, PDO::PARAM_INT);
-		$stmt->execute();
-		$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-			echo "<p><b>" . $type . " ";
-			echo $length . "hour, ";
-			echo "up to " . $number_of_people . " people</b>";
-			echo '</p>';
 	?>
 
 
