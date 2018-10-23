@@ -41,9 +41,8 @@ catch (PDOException $ex)
 		    $length = $p['photoshoot_length'];
 		    $number_of_people = $p['photoshoot_number_of_people'];
 		    $number_of_outfits = $p['photoshoot_number_of_outfits'];
-			echo "<p><b>" . $type . "</b> - length: ". $length . " hour, up to " . $number_of_people . " people, " . $number_of_outfits . " outfits</p>";
-			echo ;
-			echo ;
+			echo "<p><b>" . $type . "</b> length: " . $length . " hour, up to " . $number_of_people . " people, " . $number_of_outfits . " outfits</p>";
+
 		}
 		// $getAddress = $db->prepare("SELECT * FROM address ORDER BY address_id ASC");
 		//   $getAddress->execute();
