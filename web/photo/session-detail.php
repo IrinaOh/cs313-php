@@ -1,7 +1,5 @@
 <?php
-	session_start();
-	$id = $_SESSION['sid'];
-	echo $id;
+	$id = $_GET['id'];
 ?>
 
 <?php
@@ -36,19 +34,18 @@ catch (PDOException $ex)
 <body>
 	<h1> Photo Session Details </h1>
 	<?php
-		foreach ($db->query('SELECT * FROM photoshoot WHERE photoshoot_id=$sid') as $p)
+		foreach ($db->query('SELECT * FROM photoshoot WHERE photoshoot_id=$id') as $p)
 		{
 			echo "<p><b>" . $p['photoshoot_type'] . " ";
 			echo $p['photoshoot_length'] . "hour";
 			echo "up to " . $p['photoshoot_number_of_people'] . " people</b> - ";
 			echo '</p>';
 		}
+		// $stmt = $db->prepare('SELECT * FROM photoshoot WHERE id=:photoshoot_id');
+		// $stmt->bindValue(':photoshoot_id', $id, PDO::PARAM_INT);
+		// $stmt->execute();
+		// $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	?>
-
-<!-- 	<form action="" method ="post" id="searchForm">
-		<input type="text" name="search">
-		<input type="submit" name="submit" value="Search">
-	</form> -->
 
 
 
