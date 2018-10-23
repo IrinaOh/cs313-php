@@ -51,7 +51,6 @@ catch (PDOException $ex)
 		//         echo $address['street'] . ", " . $address['city'] . ", " . $address['zip'] . ", " . $address['country'] . "<br>";
 		//   }
 
-		// foreach ($db->query("SELECT * FROM photoshoot WHERE photoshoot_id='$book'" as $row)
 
 		// $stmt = $db->prepare('SELECT * FROM photoshoot WHERE photoshoot_id=:$id');
 		// $stmt->bindValue(':photoshoot_id', $id, PDO::PARAM_INT);
