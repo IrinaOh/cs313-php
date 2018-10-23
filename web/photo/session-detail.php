@@ -36,11 +36,17 @@ catch (PDOException $ex)
 	<?php
 		foreach ($db->query('SELECT * FROM photoshoot WHERE photoshoot_id=$id') as $p)
 		{
-			echo "<p><b>" . $p['photoshoot_type'] . " ";
-			echo $p['photoshoot_length'] . "hour";
-			echo "up to " . $p['photoshoot_number_of_people'] . " people</b> - ";
+		    $id = $p['photoshoot_id'];
+		    $type = $p['photoshoot_type'];
+		    $length = $p['photoshoot_length'];
+		    $number_of_people = $p['photoshoot_number_of_people'];
+			echo "<p><b>" . $type . " ";
+			echo $length . "hour, ";
+			echo "up to " . $number_of_people . " people</b>";
 			echo '</p>';
 		}
+
+
 		// $stmt = $db->prepare('SELECT * FROM photoshoot WHERE id=:photoshoot_id');
 		// $stmt->bindValue(':photoshoot_id', $id, PDO::PARAM_INT);
 		// $stmt->execute();
