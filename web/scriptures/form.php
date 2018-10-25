@@ -23,7 +23,7 @@
     echo 'Error!: ' . $ex->getMessage();
     die();
   }
-}
+
   //$db = get_db();
 
   //$query = 'SELECT s.book, s.chapter, s.verse, s.content, t.name FROM scripture s JOIN topic t ON s.topic_id = t.topic_id';
