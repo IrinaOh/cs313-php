@@ -14,7 +14,7 @@
 <body>
 	<h1>Add New Scriptures</h1>
   <ul>
-    <?php
+<!--     <?php
       <ul>
         <form name="insert" action="insert.php" method ="POST">
           <li>Book: <input type="text" name="book"></li>
@@ -24,7 +24,7 @@
           <li><input type="submit" name="submit" value=""></li>
         </form>
       </ul>
-    ?>
+    ?> -->
   </ul>
 </body>
 </html>
