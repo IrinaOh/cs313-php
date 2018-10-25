@@ -27,7 +27,7 @@
 	<h1>Add New Scriptures</h1>
 <!--     <?php
       <ul>
-        <form name="insert" action="insert.php" method ="POST">
+        <form action="insert.php" method ="POST">
           <li>Book: <input type="text" name="book"></li>
           <li>Chapter: <input type="text" name="chapter"></li>
           <li>Verse: <input type="text" name="verse"></li>
