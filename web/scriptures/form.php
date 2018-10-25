@@ -32,6 +32,7 @@
   // $scriptures_topics = $stmt->fetchAll(PDO::FETCH_ASSOC); //acts like a loop
 ?>
 <!doctype html>
+<html>
 <head>
 	<title>Scripture Form</title>
 </head>
