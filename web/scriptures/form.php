@@ -1,11 +1,11 @@
 <?php
-  require ('dbConnect.php');
-  $db = get_db();
+  // require ('dbConnect.php');
+  // $db = get_db();
 
-  $query = 'SELECT s.book, s.chapter, s.verse, s.content, t.name FROM scripture s JOIN topic t ON s.topic_id = t.topic_id';
-  $stmt = $db->prepare($query);
-  $stmt->execute();
-  $scriptures_topics = $stmt->fetchAll(PDO::FETCH_ASSOC); //acts like a loop
+  // $query = 'SELECT s.book, s.chapter, s.verse, s.content, t.name FROM scripture s JOIN topic t ON s.topic_id = t.topic_id';
+  // $stmt = $db->prepare($query);
+  // $stmt->execute();
+  // $scriptures_topics = $stmt->fetchAll(PDO::FETCH_ASSOC); //acts like a loop
 ?>
 <!doctype html>
 <head>
