@@ -25,13 +25,13 @@
 </head>
 <body>
 	<h1>Add New Scriptures</h1>
-<!--     <?php
-      <ul>
+     <?php
+
         <form action="insert.php" method ="POST">
-          <li>Book: <input type="text" name="book"></li>
-          <li>Chapter: <input type="text" name="chapter"></li>
-          <li>Verse: <input type="text" name="verse"></li>
-          <li>Content: <input type="textarea" name="content"></li>
+          Book: <input type="text" name="book"></br>
+          Chapter: <input type="text" name="chapter"></br>
+          Verse: <input type="text" name="verse"></br>
+          Content: <input type="textarea" name="content"></br>
           // <li>Topic: 
           //   foreach ($db->query('SELECT name FROM topic') as $row)
           //     {
@@ -40,9 +40,14 @@
           //   }
            
           // </li>
-          <li><input type="submit" name="submit" value="submit"></li>
+          foreach ($db->query('SELECT name FROM topic') as $row)
+              {
+                echo "<input type = 'checkbox' name= 'topic' value=" . $row['name'] . ">". $row['name'] ."</br>"
+                ;
+          }
+          <input type="submit" name="submit" value="submit">
         </form>
-      </ul>
-    ?> -->
+
+    ?>
 </body>
 </html>
