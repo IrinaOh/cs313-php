@@ -1,7 +1,7 @@
 <?php
   $_GET['id'] = $id;
 ?>
-<?php require('dbConnect.php'); ?> 
+<?php require('dbConnect.php'); ?>
 <?php
 try
 {
