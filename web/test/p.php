@@ -1,7 +1,8 @@
 <?php
-  $_GET['id'] = $id;
+  $_GET['id'] = $id; //??? DO I NEED THIS HERE?
+  // $id = $_GET['id']; this is for the next page
 ?>
-<?php require('dbConnect.php'); ?> 
+
 <?php
 try
 {
@@ -28,13 +29,18 @@ catch (PDOException $ex)
 <body>
   <h1> Photo Sessions </h1>
   <?php
-  foreach ($db->query('SELECT * FROM photoshoot') as $p)
+  foreach ($db->query('SELECT photoshoot_id, photoshoot_type FROM photoshoot') as $p)
   {
     $id = $p['photoshoot_id'];
     $type = $p['photoshoot_type'];
-    echo "<p><a href='session-detail.php?id=$id'>" . $type . "</a></p>";
+    echo "<p><a href='session-details.php?id=$id'>" . $type . "</a></p>";
   }
   ?>
+
+  <form action="search.php" method ="post" id="searchForm">
+    <input type="text" name="query">
+    <input type="submit" name="submit" value="Search">
+  </form>
 
 </body>
 </html>
