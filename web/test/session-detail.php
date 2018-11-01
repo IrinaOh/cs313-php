@@ -11,7 +11,7 @@
 	// $query = 'SELECT p.photoshoot_type, p.photoshoot_length, p.photoshoot_number_of_people, p.photoshoot_number_of_images, p.photoshoot_number_of_outfits, f.feedback_content FROM feedback f JOIN photoshoot p ON f.feedback_photoshoot_id = p.photoshoot_id WHERE p.photoshoot_id='.$photoshoot_id;
 
 
-
+	//join query didn't work for me because it repeated photoshoot details information as many times as how many feedbacks were left for that photoshoot(if 0 than details were not displayed at all). 
 	$query = 'SELECT * FROM photoshoot WHERE photoshoot_id='.$photoshoot_id;
 	$query1 = 'SELECT * FROM feedback WHERE feedback_photoshoot_id='.$photoshoot_id;
 
@@ -31,10 +31,10 @@
 	<title>Photoshoot Details</title>
 </head>
 <body>
-	<h1><?php echo $photoshoot_type; ?> Photo Session Details </h1>
 	<?php
 	foreach ($photoshoots as $p) 
 	{
+
 		$id = $p['photoshoot_id'];
 	    $type = $p['photoshoot_type'];
 	    $length = $p['photoshoot_length'];
@@ -42,7 +42,9 @@
 		$images = $p['photoshoot_number_of_images'];
 	    $outfits = $p['photoshoot_number_of_outfits'];
 
-		echo "<p><b>" . $type . "</b> length: " . $length . " hour,<br> up to " . $people . " people,<br> " . $images . " images,<br> " . $outfits . " outfits</p>";
+	    echo "<h1>".$type." Details</h1>";
+
+		echo "<p>length: " . $length . " hour,<br> up to " . $people . " people,<br> " . $images . " images,<br> " . $outfits . " outfits</p>";
 	}
 	?>
 	<h2>Customer Feedback:</h2>
