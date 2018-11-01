@@ -25,14 +25,14 @@ $photoshoot_type = $photoshoots[0]['p.photoshoot_type'];
 <body>
 	<h1><?php echo $photoshoot_type; ?> Photo Session Details </h1>
 	<?php
-	foreach ($photoshoots as $photoshoots) 
+	foreach ($photoshoots as $p) 
 	{
-		$id = $photoshoots['photoshoot_id'];
-	    $type = $photoshoots['photoshoot_type'];
-	    $length = $photoshoots['photoshoot_length'];
-	    $people = $photoshoots['photoshoot_number_of_people'];
-		$images = $photoshoots['photoshoot_number_of_images'];
-	    $outfits = $photoshoots['photoshoot_number_of_outfits'];
+		$id = $p['photoshoot_id'];
+	    $type = $p['photoshoot_type'];
+	    $length = $p['photoshoot_length'];
+	    $people = $p['photoshoot_number_of_people'];
+		$images = $p['photoshoot_number_of_images'];
+	    $outfits = $p['photoshoot_number_of_outfits'];
 
 		echo "<p><b>" . $type . "</b> length: " . $length . " hour,<br> up to " . $people . " people,<br> " . $images . " images,<br> " . $outfits . " outfits</p>";
 	}
