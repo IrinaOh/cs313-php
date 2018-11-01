@@ -10,7 +10,7 @@ $db = get_db();
 //check if this query works in sql
 $query = 'SELECT p.photoshoot_type, p.photoshoot_length, p.photoshoot_number_of_people, p.photoshhot_number_of_images, p.photoshoot_number_of_outfits, f.feedback_content FROM feedback f JOIN photoshoot p ON f.feedback_photoshoot_id = p.photoshoot_id WHERE p.photoshoot_id='.$photoshoot_id;
 $stmt = $db->prepare($query);
-$stmt->bindValue(':p.photoshoot_id', $photoshoot_id, PDO::PARAM_INT);
+// $stmt->bindValue(':p.photoshoot_id', $photoshoot_id, PDO::PARAM_INT);
 $stmt->execute();
 
 $photoshoots = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -30,7 +30,7 @@ $photoshoot_type = $photoshoots[0]['p.photoshoot_type'];
 		    $type = $p['photoshoot_type'];
 		    $length = $p['photoshoot_length'];
 		    $people = $p['photoshoot_number_of_people'];
-				$images = $p['photoshoot_number_of_images'];
+			$images = $p['photoshoot_number_of_images'];
 		    $outfits = $p['photoshoot_number_of_outfits'];
 			echo "<p><b>" . $type . "</b> length: " . $length . " hour, up to " . $people . " people, " . $images . " images, " . $outfits . " outfits</p>";
 		}
