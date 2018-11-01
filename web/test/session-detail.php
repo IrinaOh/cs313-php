@@ -11,6 +11,7 @@ $photo_query = 'SELECT  photoshoot_type, photoshoot_length, photoshoot_number_of
 $photo_stmt = $db->prepare($photo_query);
 $photo_stmt->execute();
 $details = $photo_stmt->fetchAll(PDO::FETCH_ASSOC);
+$details_type = $details[0]['photoshoot_type'];
 
 //check if this query works in sql
 $query = 'SELECT p.photoshoot_type, p.photoshoot_length, p.photoshoot_number_of_people, p.photoshoot_number_of_images, p.photoshoot_number_of_outfits, f.feedback_content FROM feedback f JOIN photoshoot p ON f.feedback_photoshoot_id = p.photoshoot_id WHERE p.photoshoot_id='.$photoshoot_id;
