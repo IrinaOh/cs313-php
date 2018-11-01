@@ -17,15 +17,23 @@
     Verse: <input type="text" name="verse"/></br>
     Content: <input type="textarea" name="content"/></br>
     Topic:
-    <?php  
-    foreach ($db->query('SELECT name FROM topic') as $row)
-    {
-      $name = $row['name'];
-      echo "<input type = 'checkbox' name= 'topic' value=" . $name . ">". $name ."</br>"
-      ;
-    }
+
+    <?php
+      foreach ($db->query('SELECT name FROM topic') as $row)
+      {
+        $name = $row['name'];
+        echo "<input type='checkbox' name='" . $name . "'>" . $name . "<br />";
+      }
     ?>
-    <input type="submit" name="submit" value="submit"/>
-  </form>
+        
+      <input type="submit" name="addScripture" id="addScripture" />
+    </form>
+      
+    <?php
+      if (isset($_POST["addScripture"]))
+      {
+        $db->query('INSERT INTO scripture (book, chapter, verse, content) VALUES (\'' . $_POST['book'] . '\', \'' . $_POST['chapter'] . '\', \'' . $_POST['verse'] . '\', \'' . $_POST['content'] . '\');');
+      }
+    ?>
 </body>
 </html>

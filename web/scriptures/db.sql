@@ -44,3 +44,10 @@ FROM scripture_topic st
 		ON st.topic_id = t.topic_id;
 	JOIN scripture s
 		ON st.scripture_id = s.scripture_id;
+
+--week7
+CREATE TABLE account(
+account_id serial PRIMARY KEY,
+account_username VARCHAR(80) NOT NULL,
+account_password VARCHAR(80) NOT NULL
+);
