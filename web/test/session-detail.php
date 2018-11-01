@@ -50,13 +50,13 @@
 	<h2>Customer Feedback:</h2>
 
 	<?php
-		if($feedbacks == NULL){
-			echo "<i>No comments yet...</i>";
-		}
+
 		foreach($feedbacks as $f)
 		{
 		    $feedback = $f['feedback_content'];
-
+		    if($feedback == NULL){
+				echo "<i>No comments yet...</i>";
+			}
 			echo "<p>" . $feedback . "</p>";
 		}
 	?>
