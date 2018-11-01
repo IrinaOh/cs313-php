@@ -1,6 +1,5 @@
 <?php
   $_GET['photoshoot_id'] = $photoshoot_id;
-  $_POST['photoshoot_type'] = $photoshoot_type;
 
   require('dbConnect.php');
   $db = get_db();

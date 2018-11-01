@@ -3,20 +3,26 @@
 		die("Error, photoshoot id is not specified...");
 	}
 	$photoshoot_id = htmlspecialchars($_GET['photoshoot_id']);
-	$photoshoot_type = htmlspecialchars($_POST['photoshoot_type']);
-	echo $photoshoot_id;
-	echo $photoshoot_type;
+;
 
 	require('dbConnect.php');
 	$db = get_db();
 
-	//check if this query works in sql
-	$query = 'SELECT p.photoshoot_type, p.photoshoot_length, p.photoshoot_number_of_people, p.photoshoot_number_of_images, p.photoshoot_number_of_outfits, f.feedback_content FROM feedback f JOIN photoshoot p ON f.feedback_photoshoot_id = p.photoshoot_id WHERE p.photoshoot_id='.$photoshoot_id;
+	// $query = 'SELECT p.photoshoot_type, p.photoshoot_length, p.photoshoot_number_of_people, p.photoshoot_number_of_images, p.photoshoot_number_of_outfits, f.feedback_content FROM feedback f JOIN photoshoot p ON f.feedback_photoshoot_id = p.photoshoot_id WHERE p.photoshoot_id='.$photoshoot_id;
+
+
+
+	$query = 'SELECT * FROM photoshoot WHERE photoshoot_id='.$photoshoot_id;
+	$query1 = 'SELECT * FROM feedback WHERE feedback_photoshoot_id='.$photoshoot_id;
+
 	$stmt = $db->prepare($query);
+	$stmt1 = $db->prepare($query1);
 	// $stmt->bindValue(':p.photoshoot_id', $photoshoot_id, PDO::PARAM_INT);
 	$stmt->execute();
+	$stmt1->execute();
 
 	$photoshoots = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$feedbacks = $stmt1->fetchAll(PDO::FETCH_ASSOC)
 	$photoshoot_type = $photoshoots[0]['p.photoshoot_type'];
 ?>
 
@@ -41,9 +47,9 @@
 	?>
 	<h2>Customer Feedback:</h2>
 	<?php
-		foreach($photoshoots as $p)
+		foreach($feedbacks as $f)
 		{
-		    $feedback = $p['feedback_content'];
+		    $feedback = $f['feedback_content'];
 
 			echo "<p>" . $feedback . "</p>";
 		}
