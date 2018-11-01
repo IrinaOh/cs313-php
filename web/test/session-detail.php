@@ -4,6 +4,8 @@
 	}
 	$photoshoot_id = htmlspecialchars($_GET['photoshoot_id']);
 	$type = htmlspecialchars($_GET['type']);
+	echo $photoshoot_id;
+	echo $type;
 
 	require('dbConnect.php');
 	$db = get_db();
