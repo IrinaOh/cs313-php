@@ -3,9 +3,9 @@
 		die("Error, photoshoot id is not specified...");
 	}
 	$photoshoot_id = htmlspecialchars($_GET['photoshoot_id']);
-	$type = htmlspecialchars($_GET['type']);
+	$photoshoot_type = htmlspecialchars($_GET['photoshoot_type']);
 	echo $photoshoot_id;
-	echo $type;
+	echo $photoshoot_type;
 
 	require('dbConnect.php');
 	$db = get_db();
@@ -25,7 +25,7 @@
 	<title>Photoshoot Details</title>
 </head>
 <body>
-	<h1><?php echo $type; ?> Photo Session Details </h1>
+	<h1><?php echo $photoshoot_type; ?> Photo Session Details </h1>
 	<?php
 	foreach ($photoshoots as $p) 
 	{

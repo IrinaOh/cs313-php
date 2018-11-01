@@ -1,6 +1,6 @@
 <?php
   $_GET['photoshoot_id'] = $photoshoot_id;
-  $_GET['type'] = $type;
+  $_GET['photoshoot_type'] = $photoshoot_type;
 
   require('dbConnect.php');
   $db = get_db();
