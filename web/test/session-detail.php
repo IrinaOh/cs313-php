@@ -54,9 +54,6 @@
 		foreach($feedbacks as $f)
 		{
 		    $feedback = $f['feedback_content'];
-		    if($f == 0){
-				echo "<i>No comments yet...</i>";
-			}
 			echo "<p>" . $feedback . "</p>";
 		}
 	?>

@@ -47,7 +47,7 @@ FROM scripture_topic st
 
 --week7
 CREATE TABLE account(
-account_id serial PRIMARY KEY,
-account_username VARCHAR(80) NOT NULL,
-account_password VARCHAR(80) NOT NULL
+	account_id serial PRIMARY KEY,
+	account_username VARCHAR(80) NOT NULL,
+	account_password VARCHAR(80) NOT NULL
 );
