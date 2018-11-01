@@ -23,7 +23,7 @@ $photoshoot_type = $photoshoots[0]['p.photoshoot_type'];
 	<title>Photoshoot Details</title>
 </head>
 <body>
-	<h1><?php echo '$photoshoot_type'; ?> Photo Session Details </h1>
+	<h1><?php echo $photoshoots['p.photoshoot_type']; ?> Photo Session Details </h1>
 	<?php
 	foreach ($photoshoots as $p) 
 	{
