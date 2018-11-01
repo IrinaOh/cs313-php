@@ -25,8 +25,9 @@ $photoshoot_type = $photoshoots[0]['p.photoshoot_type'];
 <body>
 	<h1><?php echo $photoshoot_type; ?> Photo Session Details </h1>
 	<?php
-
-	    $id = $photoshoots['photoshoot_id'];
+	foreach ($photoshoots as $photoshoots) 
+	{
+		$id = $photoshoots['photoshoot_id'];
 	    $type = $photoshoots['photoshoot_type'];
 	    $length = $photoshoots['photoshoot_length'];
 	    $people = $photoshoots['photoshoot_number_of_people'];
@@ -34,15 +35,15 @@ $photoshoot_type = $photoshoots[0]['p.photoshoot_type'];
 	    $outfits = $photoshoots['photoshoot_number_of_outfits'];
 
 		echo "<p><b>" . $type . "</b> length: " . $length . " hour,<br> up to " . $people . " people,<br> " . $images . " images,<br> " . $outfits . " outfits</p>";
-
+	}
 	?>
 	<h2>Customer Feedback:</h2>
 	<?php
-		foreach($photoshoots['feedback_content'] as $p)
+		foreach($photoshoots as $p)
 		{
-		    // $feedback = $p['feedback_content'];
+		    $feedback = $p['feedback_content'];
 
-			echo "<p>" . $p . "</p>";
+			echo "<p>" . $feedback . "</p>";
 		}
 	?>
 	<h2>Leave Your Feedback:</h2>
