@@ -23,7 +23,7 @@
 
 	$photoshoots = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	$feedbacks = $stmt1->fetchAll(PDO::FETCH_ASSOC)
-	$photoshoot_type = $photoshoots[0]['p.photoshoot_type'];
+	// $photoshoot_type = $photoshoots[0]['p.photoshoot_type'];
 ?>
 
 <!doctype html>
