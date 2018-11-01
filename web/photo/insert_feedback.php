@@ -2,11 +2,6 @@
   $feedback_photoshoot_id = htmlspecialchars($_POST['feedback_photoshoot_id']);
   $content = htmlspecialchars($_POST['feedback_content']);
 
-  //this is test to make sure it works.
-  //can remove if it does
-  echo "$feedback_photoshoot_id\n";
-  echo "$content";
-
   require('dbConnect.php');
   $db = get_db();
 
