@@ -16,7 +16,7 @@
   $stmt->bindValue(':content', $content, PDO::PARAM_STR);
   $stmt->execute();
 
-  $new_page = "session_detail.php?photoshoot_id=$feedback_photoshoot_id";
+  $new_page = "session-detail.php?photoshoot_id=$feedback_photoshoot_id";
   header("Location: $new_page");
   die();
 ?>
