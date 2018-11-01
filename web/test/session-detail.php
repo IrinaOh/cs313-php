@@ -38,11 +38,11 @@ $photoshoot_type = $photoshoots[0]['p.photoshoot_type'];
 	?>
 	<h2>Customer Feedback:</h2>
 	<?php
-		foreach($photoshoots as $p)
+		foreach($photoshoots['feedback_content'] as $p)
 		{
-		    $feedback = $p['feedback_content'];
+		    // $feedback = $p['feedback_content'];
 
-			echo "<p>" . $feedback . "</p>";
+			echo "<p>" . $p . "</p>";
 		}
 	?>
 	<h2>Leave Your Feedback:</h2>
