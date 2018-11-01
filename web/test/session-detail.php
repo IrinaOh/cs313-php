@@ -33,7 +33,8 @@ $photoshoot_type = $photoshoots[0]['p.photoshoot_type'];
 			$images = $p['photoshoot_number_of_images'];
 		    $outfits = $p['photoshoot_number_of_outfits'];
 		    $feedback = $p['feedback_content'];
-			echo "<p><b>" . $type . "</b> length: " . $length . " hour, up to " . $people . " people, " . $images . " images, " . $outfits . " outfits</p>";
+			echo "<p><b>" . $type . "</b> length: " . $length . " hour,<br> up to " . $people . " people,<br> " . $images . " images,<br> " . $outfits . " outfits</p>";
+			echo "<h2>Feedback:</h2>";
 			echo "<p>" . $feedback . "</p>";
 		}
 	?>
