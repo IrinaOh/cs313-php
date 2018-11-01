@@ -40,3 +40,16 @@ VALUES
 	('Couples Portrait', 1, 1, 30, 2),
 	('Mini Session Portrait', 0.5, 1, 30, 2);
 
+
+UPDATE photoshoot
+SET  photoshoot_number_of_people = 5
+WHERE
+ photoshoot_id = 2;
+
+UPDATE photoshoot
+SET  photoshoot_number_of_people = 2
+WHERE photoshoot_id = 4;
+
+UPDATE photoshoot
+SET  photoshoot_number_of_people = 3
+WHERE photoshoot_id = 3;
