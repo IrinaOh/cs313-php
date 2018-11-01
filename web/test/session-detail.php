@@ -3,7 +3,7 @@
 		die("Error, photoshoot id is not specified...");
 	}
 	$photoshoot_id = htmlspecialchars($_GET['photoshoot_id']);
-	$photoshoot_type = htmlspecialchars($_GET['photoshoot_type']);
+	$photoshoot_type = htmlspecialchars($_POST['photoshoot_type']);
 	echo $photoshoot_id;
 	echo $photoshoot_type;
 
