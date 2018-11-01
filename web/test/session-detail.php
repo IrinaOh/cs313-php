@@ -54,7 +54,7 @@
 		foreach($feedbacks as $f)
 		{
 		    $feedback = $f['feedback_content'];
-		    if($feedback == " "){
+		    if($feedback == "0 rows"){
 				echo "<i>No comments yet...</i>";
 			}
 			echo "<p>" . $feedback . "</p>";
