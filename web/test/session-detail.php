@@ -4,19 +4,18 @@
 	}
 	$photoshoot_id = htmlspecialchars($_GET['photoshoot_id']);
 	$type = htmlspecialchars($_GET['type']);
-?>
-<?php
-require('dbConnect.php');
-$db = get_db();
 
-//check if this query works in sql
-$query = 'SELECT p.photoshoot_type, p.photoshoot_length, p.photoshoot_number_of_people, p.photoshoot_number_of_images, p.photoshoot_number_of_outfits, f.feedback_content FROM feedback f JOIN photoshoot p ON f.feedback_photoshoot_id = p.photoshoot_id WHERE p.photoshoot_id='.$photoshoot_id;
-$stmt = $db->prepare($query);
-// $stmt->bindValue(':p.photoshoot_id', $photoshoot_id, PDO::PARAM_INT);
-$stmt->execute();
+	require('dbConnect.php');
+	$db = get_db();
 
-$photoshoots = $stmt->fetchAll(PDO::FETCH_ASSOC);
-$photoshoot_type = $photoshoots[0]['p.photoshoot_type'];
+	//check if this query works in sql
+	$query = 'SELECT p.photoshoot_type, p.photoshoot_length, p.photoshoot_number_of_people, p.photoshoot_number_of_images, p.photoshoot_number_of_outfits, f.feedback_content FROM feedback f JOIN photoshoot p ON f.feedback_photoshoot_id = p.photoshoot_id WHERE p.photoshoot_id='.$photoshoot_id;
+	$stmt = $db->prepare($query);
+	// $stmt->bindValue(':p.photoshoot_id', $photoshoot_id, PDO::PARAM_INT);
+	$stmt->execute();
+
+	$photoshoots = $stmt->fetchAll(PDO::FETCH_ASSOC);
+	$photoshoot_type = $photoshoots[0]['p.photoshoot_type'];
 ?>
 
 <!doctype html>
