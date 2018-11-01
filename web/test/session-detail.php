@@ -7,7 +7,7 @@
 <?php
 require('dbConnect.php');
 $db = get_db();
-$photo_query = 'SELECT  photoshoot_type, photoshoot_length, photoshoot_number_of_people, photoshoot_number_of_images, photoshoot_number_of_outfits FROM photoshoot WHERE photoshoot_id='.$photoshoot_id;
+$photo_query = 'SELECT photoshoot_type, photoshoot_length, photoshoot_number_of_people, photoshoot_number_of_images, photoshoot_number_of_outfits FROM photoshoot WHERE photoshoot_id='.$photoshoot_id;
 $photo_stmt = $db->prepare($photo_query);
 $photo_stmt->execute();
 $details = $photo_stmt->fetchAll(PDO::FETCH_ASSOC);
