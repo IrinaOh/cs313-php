@@ -32,9 +32,16 @@ $photoshoot_type = $photoshoots[0]['p.photoshoot_type'];
 		    $people = $p['photoshoot_number_of_people'];
 			$images = $p['photoshoot_number_of_images'];
 		    $outfits = $p['photoshoot_number_of_outfits'];
-		    $feedback = $p['feedback_content'];
+
 			echo "<p><b>" . $type . "</b> length: " . $length . " hour,<br> up to " . $people . " people,<br> " . $images . " images,<br> " . $outfits . " outfits</p>";
-			echo "<h2>Feedback:</h2>";
+		}
+	?>
+	<h2>Customer Feedback:</h2>
+	<?php
+		foreach($photoshoots as $p)
+		{
+		    $feedback = $p['feedback_content'];
+
 			echo "<p>" . $feedback . "</p>";
 		}
 	?>
