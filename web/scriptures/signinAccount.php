@@ -8,7 +8,7 @@
   $query = 'SELECT account_password, account_username FROM accounts WHERE account_username=:user';
   
   $stmt = $db->prepare($query);
-  $stmt->BindValue(':user', $user, PDO::PARAM_STR);
+  $stmt->BindValue('user', $user, PDO::PARAM_STR);
   $result = $stmt->execute();
   
   if ($result)
