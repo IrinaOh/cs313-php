@@ -17,14 +17,12 @@
 	// }
 	// else if (1 === preg_match('~[0-9]~', $pass) && strlen($pass) >= 7)
 	// {
-		//$hashedPass = password_hash($pass, PASSWORD_DEFAULT);
-		$query = 'INSERT INTO account(account_username, account_password) VALUES ('.$user.','.$pass.')';
+		$hashedPass = password_hash($pass, PASSWORD_DEFAULT);
+		$query = 'INSERT INTO account(account_username, account_password) VALUES (:user, :pass);';
 		$stmt = $db->prepare($query);
-		// $stmt->BindValue(':user', $user, PDO::PARAM_STR);
-		// $stmt->BindValue(':pass', $hashedPass, PDO::PARAM_STR);
+		$stmt->bindValue('user', $user, PDO::PARAM_STR);
+		$stmt->bindValue('pass', $hashedPass, PDO::PARAM_STR);
 		$stmt->execute();
-
-		$accounts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	
 		header('Location: signin.php');
 	// }
