@@ -1,13 +1,13 @@
 <?php
   session_start();
-  require('dbConnect.php');
-  $db = get_db();
   
   $username = $_POST['username'];
   $password = $_POST['password'];
 
+  require('dbConnect.php');
+  $db = get_db();
   
-  $query = 'SELECT account_password, account_username FROM accounts WHERE account_username='.$username;
+  $query = 'SELECT account_password, account_username FROM account WHERE account_username='.$username;
   
   $stmt = $db->prepare($query);
   $stmt->BindValue('username', $username, PDO::PARAM_STR);
