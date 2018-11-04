@@ -7,7 +7,7 @@
   require('dbConnect.php');
   $db = get_db();
   
-  $query = 'SELECT account_username, account_password FROM account WHERE account_username='.$username;
+  $query = 'SELECT * FROM account WHERE account_username='.$username;
   
   $stmt = $db->prepare($query);
   $stmt->execute();
