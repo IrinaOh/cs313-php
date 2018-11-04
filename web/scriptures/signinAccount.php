@@ -10,8 +10,9 @@
   $query = 'SELECT account_password, account_username FROM account WHERE account_username='.$username;
   
   $stmt = $db->prepare($query);
-  $stmt->BindValue('username', $username, PDO::PARAM_STR);
+  // $stmt->BindValue('username', $username, PDO::PARAM_STR);
   $result = $stmt->execute();
+  
   
   if ($result)
   {
