@@ -5,14 +5,14 @@
   $user = $_POST['username'];
   $pass = $_POST['password'];
   
-  $query = 'SELECT account_password, account_username FROM accounts WHERE account_username=:user';
+  $query = 'SELECT account_password, account_username FROM accounts WHERE account_username='.$user;
   
   $stmt = $db->prepare($query);
   $stmt->BindValue('user', $user, PDO::PARAM_STR);
-  $result = $stmt->execute();
+  $stmt->execute();
   
-  if ($result)
-  {
+  // if ($result)
+  // {
     $row = $stmt->fetch();
     
     $hashedPass = $row['account_password'];
@@ -27,9 +27,9 @@
     {
       header('Location: signin.php');
     }
-  }
-  else
-  {
-    header('Location: signin.php');
-  }
+  // }
+  // else
+  // {
+  //   header('Location: signin.php');
+  // }
 ?>
