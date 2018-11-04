@@ -1,9 +1,12 @@
 <?php
   session_start();
   require('dbConnect.php');
+  $db = get_db();
   
   $username = $_POST['username'];
   $password = $_POST['password'];
+
+  echo $username;
   
   $query = 'SELECT account_password, account_username FROM accounts WHERE account_username='.$username;
   
