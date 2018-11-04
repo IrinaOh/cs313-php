@@ -7,12 +7,12 @@
   require('dbConnect.php');
   $db = get_db();
   
-  $query = 'SELECT account_password, account_username FROM account WHERE account_username='.$username;
+  $query = 'SELECT account_username, account_password FROM account WHERE account_username='.$username;
   
   $stmt = $db->prepare($query);
   // $stmt->BindValue('username', $username, PDO::PARAM_STR);
   $result = $stmt->execute();
-  
+
   
   if ($result)
   {
