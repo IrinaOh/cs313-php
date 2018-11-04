@@ -2,13 +2,13 @@
   session_start();
   require('dbConnect.php');
   
-  $user = $_POST['username'];
-  $pass = $_POST['password'];
+  $username = $_POST['username'];
+  $password = $_POST['password'];
   
-  $query = 'SELECT account_password, account_username FROM accounts WHERE account_username='.$user;
+  $query = 'SELECT account_password, account_username FROM accounts WHERE account_username='.$username;
   
   $stmt = $db->prepare($query);
-  $stmt->BindValue('user', $user, PDO::PARAM_STR);
+  $stmt->BindValue('username', $username, PDO::PARAM_STR);
   $stmt->execute();
   
   // if ($result)
@@ -17,9 +17,9 @@
     
     $hashedPass = $row['account_password'];
     
-    if (password_verify($pass, $hashedPass))
+    if (password_verify($password, $hashedPass))
     {
-      $_SESSION['user'] = $row['account_username'];
+      $_SESSION['username'] = $row['account_username'];
       
       header('Location: home.php');
     }
