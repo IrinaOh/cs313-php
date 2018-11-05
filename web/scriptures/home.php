@@ -18,6 +18,7 @@
 	</head>
 
 	<body>
+		<a href="signout.php">Sign Out</a>
 		<div>
 			<h1>Welcome <?php echo $user; ?></h1>
 		</div>
