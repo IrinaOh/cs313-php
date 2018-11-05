@@ -14,7 +14,7 @@
 	$db = get_db();
 	$query = 'SELECT account_password FROM account WHERE account_username=:username';
 	$stmt = $db->prepare($query);
-	$stmt->bindValue(':account_username', $username);
+	// $stmt->bindValue(':account_username', $username);
 	$result = $stmt->execute();
 	if ($result)
 	{
