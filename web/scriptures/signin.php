@@ -93,7 +93,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 	$db = get_db();
 	$query = 'SELECT account_password FROM account WHERE account_username=:username';
 	$statement = $db->prepare($query);
-	$statement->bindValue(':username', $username);
+	$statement->bindValue(':username', $account_username);
 	$result = $statement->execute();
 	// if ($result)
 	// {
