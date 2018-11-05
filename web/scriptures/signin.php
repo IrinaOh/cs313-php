@@ -18,7 +18,7 @@
 	$result = $stmt->execute();
 	// if ($result)
 	// {
-		$hashedPasswordFromDB = $stmt->fetch('account_password');
+		$hashedPasswordFromDB = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		// now check to see if the hashed password matches
 		if (password_verify($password, $hashedPasswordFromDB))
 		{
