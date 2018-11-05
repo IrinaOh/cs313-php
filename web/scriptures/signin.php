@@ -12,7 +12,7 @@
 	// Connect to the DB
 	require("dbConnect.php");
 	$db = get_db();
-	$query = 'SELECT password FROM account WHERE username=:username';
+	$query = 'SELECT account_password FROM account WHERE account_username=:username';
 	$statement = $db->prepare($query);
 	$statement->bindValue(':username', $username);
 	$result = $statement->execute();
