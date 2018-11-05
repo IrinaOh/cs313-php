@@ -19,7 +19,7 @@
 
 	<body>
 		<div>
-			<h1>Welcome <?php echo $username ?></h1>
+			<h1>Welcome <?php echo $user; ?></h1>
 		</div>
 	</body>
 </html>
