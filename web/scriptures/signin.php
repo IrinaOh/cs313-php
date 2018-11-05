@@ -13,12 +13,12 @@
 	require("dbConnect.php");
 	$db = get_db();
 	$query = 'SELECT account_password FROM account WHERE account_username=:username';
-	$statement = $db->prepare($query);
-	$statement->bindValue(':username', $username);
-	$result = $statement->execute();
+	$stmt = $db->prepare($query);
+	$stmt->bindValue(':account_username', $username);
+	$result = $stmt->execute();
 	if ($result)
 	{
-		$row = $statement->fetch();
+		$row = $stmt->fetch();
 		$hashedPasswordFromDB = $row['account_password'];
 		// now check to see if the hashed password matches
 		if (password_verify($password, $hashedPasswordFromDB))
