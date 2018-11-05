@@ -18,20 +18,19 @@
 	$result = $stmt->execute();
 	// if ($result)
 	// {
-		// $row = ;
-		// $hashedPasswordFromDB = $stmt->fetch('account_password');
-		// // now check to see if the hashed password matches
-		// if (password_verify($password, $hashedPasswordFromDB))
-		// {
+		$hashedPasswordFromDB = $stmt->fetch('account_password');
+		// now check to see if the hashed password matches
+		if (password_verify($password, $hashedPasswordFromDB))
+		{
 			// password was correct, put the user on the session, and redirect to home
 			$_SESSION['username'] = $username;
 			header("Location: home.php");
 			die(); // we always include a die after redirects.
-		// }
-		// else
-		// {
-		// 	$badLogin = true;
-		// }
+		}
+		else
+		{
+			$badLogin = true;
+		}
 	// }
 	// else
 	// {
