@@ -1,9 +1,9 @@
 <?php
 	session_start();
 	
-	if (isset($_SESSION['user']))
+	if (isset($_SESSION['username']))
 	{
-		$user = $_SESSION['user'];
+		$user = $_SESSION['username'];
 	}
 	else
 	{
@@ -19,7 +19,7 @@
 
 	<body>
 		<div>
-			<h1>Welcome <?php echo $user ?></h1>
+			<h1>Welcome <?php echo $username ?></h1>
 		</div>
 	</body>
 </html>
