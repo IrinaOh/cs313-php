@@ -93,10 +93,10 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 	$db = get_db();
 	$query = 'SELECT account_password FROM account WHERE account_username=:username';
 	$statement = $db->prepare($query);
-	$statement->bindValue(':username', $username);
+	$statement->bindValue(':account_username', $username);
 	$result = $statement->execute();
-	if ($result)
-	{
+	// if ($result)
+	// {
 		$row = $statement->fetch();
 		$hashedPasswordFromDB = $row['password'];
 		// now check to see if the hashed password matches
@@ -111,11 +111,11 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 		{
 			$badLogin = true;
 		}
-	}
-	else
-	{
-		$badLogin = true;
-	}
+	// }
+	// else
+	// {
+	// 	$badLogin = true;
+	// }
 }
 // If we get to this point without having redirected, then it means they
 // should just see the login form.
