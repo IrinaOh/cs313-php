@@ -14,11 +14,12 @@
 	$db = get_db();
 	$query = 'SELECT account_password FROM account WHERE account_username=:username';
 	$stmt = $db->prepare($query);
-	$stmt->bindValue(':username', $username);
-	$result = $stmt->execute();
+	$stmt->bindValue('username', $username);
+	$stmt->execute();
 	// if ($result)
 	// {
-		$hashedPasswordFromDB = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		$row = $stmt->fetch();
+		$hashedPasswordFromDB = $row['account_password'];
 		// now check to see if the hashed password matches
 		if (password_verify($password, $hashedPasswordFromDB))
 		{
