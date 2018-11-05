@@ -83,8 +83,8 @@ session_start();
 $badLogin = false;
 // First check to see if we have post variables, if not, just
 // continue on as always.
-if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
-{
+// if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
+// {
 	// they have submitted a username and password for us to check
 	$username = $_POST['txtUser'];
 	$password = $_POST['txtPassword'];
@@ -116,7 +116,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 	// {
 	// 	$badLogin = true;
 	// }
-}
+// }
 // If we get to this point without having redirected, then it means they
 // should just see the login form.
 ?>
