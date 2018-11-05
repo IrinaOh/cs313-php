@@ -19,7 +19,7 @@
 	if ($result)
 	{
 		$row = $statement->fetch();
-		$hashedPasswordFromDB = $row['password'];
+		$hashedPasswordFromDB = $row['account_password'];
 		// now check to see if the hashed password matches
 		if (password_verify($password, $hashedPasswordFromDB))
 		{
