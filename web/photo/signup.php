@@ -23,12 +23,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<?php require('head'); ?>
+		<?php include('head'); ?>
 		<title>Sign Up</title>
 	</head>
 
 	<body>
-		<?php require('header'); ?>
+		<?php include('header'); ?>
 		<div>
 			<h1>Enter Account Information</h1>
 			<form action="createAccount.php" method="post">
@@ -47,6 +47,6 @@
 				<input type="submit" value="Create Account" />
 			</form>
 		</div>
-		<?php require('footer'); ?>
+		<?php include('footer'); ?>
 	</body>
 </html>
