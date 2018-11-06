@@ -23,12 +23,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<?php include('head'); ?>
+		<?php include('head.php'); ?>
 		<title>Sign Up</title>
 	</head>
 
 	<body>
-		<?php include('header'); ?>
+		<?php include('header.php'); ?>
 		<div>
 			<h1>Enter Account Information</h1>
 			<form action="createAccount.php" method="post">
@@ -47,6 +47,6 @@
 				<input type="submit" value="Create Account" />
 			</form>
 		</div>
-		<?php include('footer'); ?>
+		<?php include('footer.php'); ?>
 	</body>
 </html>
