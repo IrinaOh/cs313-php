@@ -11,9 +11,11 @@
 ?>
 <!doctype html>
 <head>
+  <?php include('head.php'); ?>
   <title>Photoshoots</title>
 </head>
 <body>
+  <?php include('header.php'); ?>
   <h1> Photo Sessions </h1>
   <?php
   foreach ($photoshoots as $p)
@@ -23,5 +25,6 @@
     echo "<p><a href='session-detail.php?photoshoot_id=$photoshoot_id'>" . $type . "</a></p>";
   }
   ?>
+  <?php include('footer.php'); ?>
 </body>
 </html>

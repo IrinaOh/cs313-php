@@ -57,10 +57,17 @@
 		}
 	?>
 	<h2>Leave Your Feedback:</h2>
-	<form method="post" action="insert_feedback.php">
-		<input type="hidden" name="feedback_photoshoot_id" value="<?php echo $photoshoot_id;?>">
-		<input type="textarea" name="feedback_content">
-		<input type="submit" name="" value="Leave Comment">
+	<form method="post" action="insert_feedback.php" class="contact-form">
+		<div class="form-element">
+			<input type="hidden" name="feedback_photoshoot_id" value="<?php echo $photoshoot_id;?>" class="form-control" >
+		</div>
+		<div class="form-textarea">
+			<input type="textarea" name="feedback_content" class="form-control" >
+		</div>
+		<div class="form-element form-btn">
+			<input type="submit" name="" value="Leave Comment" class="btn btn-lg btn-success btn-block">
+		</div>
 	</form>
+	<?php include('footer.php'); ?>
 </body>
 </html>

@@ -58,8 +58,8 @@
 				<div class="form-element">	
 					<input type="password" name="password" id="password" placeholder="Password" class="form-control"/>
 				</div>
-				<div class="form-element">	
-					<input type="submit" value="Sign In" />
+				<div class="form-element form-btn">	
+					<input type="submit" value="Sign In" class="btn btn-lg btn-success btn-block"/>
 				</div>
 			</form>
 		</div>
