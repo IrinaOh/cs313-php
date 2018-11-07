@@ -4,10 +4,10 @@
     <label for="nav" class="nav-open"><i></i><i></i><i></i></label>
     <div class="nav-container">
       <ul>
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="photo.php" class="active">Home</a></li>
+        <li><a href="signup.php">Sign Up</a></li>
+        <li><a href="signin.php">Login</a></li>
+        <!-- <li><a href="#">About</a></li> -->
       </ul>
     </div>
   </nav>

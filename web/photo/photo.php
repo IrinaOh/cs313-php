@@ -22,7 +22,7 @@
   {
     $photoshoot_id = $p['photoshoot_id'];
     $type = $p['photoshoot_type'];
-    echo "<p><a href='session-detail.php?photoshoot_id=$photoshoot_id'>" . $type . "</a></p>";
+    echo "<p class='photoshooot'><a href='session-detail.php?photoshoot_id=$photoshoot_id'>" . $type . "</a></p>";
   }
   ?>
   <?php include('footer.php'); ?>

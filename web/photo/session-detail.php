@@ -33,6 +33,7 @@
 </head>
 <body>
 	<?php include('header.php'); ?>
+	<main>
 	<?php
 	foreach ($photoshoots as $p) 
 	{
@@ -58,13 +59,14 @@
 			echo "<p>" . $feedback . "</p>";
 		}
 	?>
-	<h2>Leave Your Feedback:</h2>
+	</main>
 	<form method="post" action="insert_feedback.php" class="contact-form">
+		<h2>Leave Your Feedback:</h2>
 		<div class="form-element">
 			<input type="hidden" name="feedback_photoshoot_id" value="<?php echo $photoshoot_id;?>" class="form-control" >
 		</div>
 		<div class="form-textarea">
-			<input type="textarea" name="feedback_content" class="form-control" >
+			<textarea type="textarea" name="feedback_content" class="form-control" ></textarea>
 		</div>
 		<div class="form-element form-btn">
 			<input type="submit" name="" value="Leave Comment" class="btn btn-lg btn-success btn-block">
