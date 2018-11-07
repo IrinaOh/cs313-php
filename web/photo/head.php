@@ -4,4 +4,4 @@
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/fonts.css">
 <link rel="stylesheet" href="../css/form.css">
-<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/index.css">

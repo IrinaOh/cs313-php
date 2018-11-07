@@ -1,0 +1,76 @@
+.form-container{
+  max-width: 600px;
+  background-image: url(../images/marble-texture.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+.contact-form{
+  background-color: #e6dbd7;
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 50px;
+}
+.contact-form-headline{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  text-align: center;
+  height: 150px;
+  padding: 0 50px;
+}
+.contact-form-headline h2{
+  margin: 10px;
+}
+.form-element{
+  width: 250px;
+  margin: 15px;
+}
+.form-element input, .form-textarea textarea{
+  padding: 10px;
+  border: 1px solid black;
+  width: 228px;
+}
+.form-textarea{
+  max-width: 530px;
+  margin: 15px;
+}
+.form-textarea textarea{
+  width: 508px;
+}
+.form-btn{
+  width: 100%;
+  text-align: center;
+}
+.form-btn button{
+  background-color: white;
+  padding: 10px 30px;
+  border: 1px solid black;
+  width: 100px;
+}
+.form-message{
+  width:100%;
+  height:100%;
+  display:none;
+}
+@media (max-width: 564px) {
+  .form-container{
+    max-width: 300px;
+  }
+  .contact-form-headline{
+    width: 100%;
+    padding: 0 30px;
+  }
+  .form-textarea{
+    width: 250px;
+  }
+  .form-textarea textarea{
+    width: 228px;
+  }
+}
