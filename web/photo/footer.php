@@ -5,11 +5,10 @@
   </div>
   <div class="footer-block footer-block2">
     <ul>
-      <li><a href="index.php">Home</a></li>
-      <li><a href="gallery.php">Gallery</a></li>
-      <!-- <li><a href="investment.php">Investment</a></li> -->
-      <li><a href="formpage.php">Contact</a></li>
-      <li><a href="about.php">About</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About</a></li>
     </ul>
   </div>
   <div class="footer-block footer-block3">

@@ -28,9 +28,11 @@
 
 <!doctype html>
 <head>
+	<?php include('head.php'); ?>
 	<title>Photoshoot Details</title>
 </head>
 <body>
+	<?php include('header.php'); ?>
 	<?php
 	foreach ($photoshoots as $p) 
 	{
