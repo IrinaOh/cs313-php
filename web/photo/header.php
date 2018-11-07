@@ -6,7 +6,6 @@
       <ul>
         <li><a href="index.php" class="active">Home</a></li>
         <li><a href="gallery.php">Gallery</a></li>
-        <!-- <li><a href="investment.php">Investment</a></li> -->
         <li><a href="formpage.php">Contact</a></li>
         <li><a href="about.php">About</a></li>
       </ul>
