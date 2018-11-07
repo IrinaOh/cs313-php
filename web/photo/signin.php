@@ -50,7 +50,6 @@
 	<body>
 		<?php include('header.php'); ?>
 		<div>
-			<h1>Enter Account Information</h1>
 			<form action="signin.php" method="post" class="contact-form">
 				<div class="form-element">
 					<input type="text" name="username" id="username" placeholder="Username" class="form-control"/>

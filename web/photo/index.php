@@ -1,4 +1,16 @@
 <?php
+  session_start();
+  
+  if (isset($_SESSION['username']))
+  {
+    $user = $_SESSION['username'];
+  }
+  // else
+  // {
+  //   header('Location: signin.php');
+  // }
+?>
+<?php
   $_GET['photoshoot_id'] = $photoshoot_id;
 
   require('dbConnect.php');
@@ -12,6 +24,14 @@
 <!doctype html>
 <head>
   <?php include('head.php'); ?>
+  <?php  
+    if (isset($_SESSION['username']))
+    {
+      echo "<a href='signout.php'>Sign Out</a>";
+      echo "Welcome" . $user;
+    }
+  ?>
+  <h1><?php echo "Welcome" . $user; ?></h1>
   <title>Photoshoots</title>
 </head>
 <body>
