@@ -31,12 +31,12 @@
 		<?php include('header.php'); ?>
 		<div>
 			<h1>Enter Account Information</h1>
-			<form action="createAccount.php" method="post">
+			<form action="createAccount.php" method="post" class="contact-form">
 				
-				<input type="text" name="username" id="username" placeholder="Username" required />
+				<input type="text" name="username" id="username" placeholder="Username" class="form-control" required />
 				<br /><br />
 				
-				<input type="password" name="password" id="password" placeholder="Password" required /> 
+				<input type="password" name="password" id="password" placeholder="Password" class="form-control" required /> 
 				<?php if ($match == false) echo '***' ?>
 				<br /><br />
 				
@@ -44,7 +44,7 @@
 				<?php if ($match == false) echo '***' ?>
 				<br /><br />
 				
-				<input type="submit" value="Create Account" />
+				<input type="submit" value="Create Account" class="btn btn-lg btn-success btn-block"/>
 			</form>
 		</div>
 		<?php include('footer.php'); ?>
