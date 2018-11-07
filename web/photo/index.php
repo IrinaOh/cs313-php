@@ -17,14 +17,16 @@
 <body>
   <?php include('header.php'); ?>
   <h1> Photo Sessions </h1>
-  <?php
-  foreach ($photoshoots as $p)
-  {
-    $photoshoot_id = $p['photoshoot_id'];
-    $type = $p['photoshoot_type'];
-    echo "<p class='photoshooot'><a href='session-detail.php?photoshoot_id=$photoshoot_id'>" . $type . "</a></p>";
-  }
-  ?>
+  <main>
+    <?php
+    foreach ($photoshoots as $p)
+    {
+      $photoshoot_id = $p['photoshoot_id'];
+      $type = $p['photoshoot_type'];
+      echo "<p class='photoshooot'><a href='session-detail.php?photoshoot_id=$photoshoot_id'>" . $type . "</a></p>";
+    }
+    ?>
+  </main>
   <?php include('footer.php'); ?>
 </body>
 </html>
