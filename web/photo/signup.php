@@ -35,7 +35,6 @@
 				<div class="form-element">
 					<input type="text" name="username" id="username" placeholder="Username" class="form-control" required />
 				</div>
-				<br /><br />
 				<div class="form-element">
 					<input type="password" name="password" id="password" placeholder="Password" class="form-control" required /> 
 				</div>
