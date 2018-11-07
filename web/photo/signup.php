@@ -32,19 +32,22 @@
 		<div>
 			<h1>Enter Account Information</h1>
 			<form action="createAccount.php" method="post" class="contact-form">
-				
-				<input type="text" name="username" id="username" placeholder="Username" class="form-control" required />
+				<div class="form-element">
+					<input type="text" name="username" id="username" placeholder="Username" class="form-control" required />
+				</div>
 				<br /><br />
-				
-				<input type="password" name="password" id="password" placeholder="Password" class="form-control" required /> 
+				<div class="form-element">
+					<input type="password" name="password" id="password" placeholder="Password" class="form-control" required /> 
 				<?php if ($match == false) echo '***' ?>
 				<br /><br />
-				
-				<input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Confirm Your Password" required />
+				</div>
+				<div class="form-element">
+					<input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Confirm Your Password" class="form-control" required /></div>
 				<?php if ($match == false) echo '***' ?>
 				<br /><br />
-				
-				<input type="submit" value="Create Account" class="btn btn-lg btn-success btn-block"/>
+				<div class="form-element form-btn">
+					<input type="submit" value="Create Account" class="btn btn-lg btn-success btn-block"/>
+				</div>
 			</form>
 		</div>
 		<?php include('footer.php'); ?>
