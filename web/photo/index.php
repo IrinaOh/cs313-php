@@ -24,20 +24,19 @@
 <!doctype html>
 <head>
   <?php include('head.php'); ?>
-  <?php  
-    if (isset($_SESSION['username']))
-    {
-      echo "<a href='signout.php'>Sign Out</a>";
-      echo "Welcome" . $user;
-    }
-  ?>
-  <h1><?php echo "Welcome" . $user; ?></h1>
   <title>Photoshoots</title>
 </head>
 <body>
   <?php include('header.php'); ?>
-  <h1> Photo Sessions </h1>
   <main>
+    <?php  
+    if (isset($_SESSION['username']))
+    {
+      echo "<a href='signout.php' class='form-btn'>Sign Out</a>";
+      echo "<h2>Welcome " . $user . "</h2>";
+    }
+  ?>
+  <h1> Photo Sessions </h1>
     <?php
     foreach ($photoshoots as $p)
     {
