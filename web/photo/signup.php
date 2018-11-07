@@ -38,13 +38,10 @@
 				<br /><br />
 				<div class="form-element">
 					<input type="password" name="password" id="password" placeholder="Password" class="form-control" required /> 
-				<?php if ($match == false) echo '***' ?>
-				<br /><br />
 				</div>
 				<div class="form-element">
-					<input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Confirm Your Password" class="form-control" required /></div>
-				<?php if ($match == false) echo '***' ?>
-				<br /><br />
+					<input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Confirm Your Password" class="form-control" required />
+				</div>
 				<div class="form-element form-btn">
 					<input type="submit" value="Create Account" class="btn btn-lg btn-success btn-block"/>
 				</div>
