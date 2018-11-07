@@ -46,9 +46,6 @@ h1 {
   max-width: 530px;
   margin: 15px;
 }
-.form-textarea textarea{
-  width: 508px;
-}
 .form-btn{
   width: 100%;
   text-align: center;
