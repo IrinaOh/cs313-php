@@ -11,5 +11,5 @@
       </ul>
     </div>
   </nav>
-  <img src="../images/logov7.png" alt="logo" class="logo">
+  <img src="/images/logov7.png" alt="logo" class="logo">
 </header>
